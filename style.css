@@ -1,0 +1,31 @@
+h1{
+    color: plum;
+    font-size: 5rem;
+    text-shadow: 5px 5px black;
+}
+
+body{
+    background-color:darkslategray;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#message-ask{
+    font-style: italic;
+}
+
+button{
+    color: black;
+    width: 150px;
+    background-color: plum;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    
+    box-shadow: 3px 3px black;
+}

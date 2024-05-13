@@ -7,34 +7,38 @@ let isAlive = false;
 let message = "";
 
 function resetCards(){
-    cardsReset = document.getElementById("playerCards");
-    cardsReset =[];
-    sumReset = document.getElementById("total");
-    sumReset = 0;
-    hasBlackJack = false;
-    isAlive = false;
-    message = "";
+    let currentCards = document.getElementById("playerCards");
+    currentCards.textContent = "Cards: ";
+
+    let currentSum = document.getElementById("total");
+    currentSum.textContent = "Sum: "
+
+    let displayMessage = document.getElementById("message-ask");
+    displayMessage.textContent = "Another game? You know what to do...";
+
 }
 
-
-
-let messageAsk = document.getElementById("message-ask");
-let sumTotal = document.getElementById("total");
-let cardsOwned = document.getElementById("playerCards");
 
 let player = {
     name: "Sophie",
     chips: 145
 };
 
-let playerEl = document.getElementById("playerDetails");
-playerEl.textContent = player.name + ": $" + player.chips;
+    let messageAsk = document.getElementById("message-ask");
+    let sumTotal = document.getElementById("total");
+    let cardsOwned = document.getElementById("playerCards");
+
+    let playerEl = document.getElementById("playerDetails");
+    playerEl.textContent = player.name + ": $" + player.chips;
+
 
 
 function getRandomCard(){
     
     let randomNumber = Math.floor(Math.random()* 13) + 1;
 
+
+    //Changing Ace to just 11, and Jack, Queen and King to be worth 10.
     if (randomNumber > 10){
         return 10;
     }else if (randomNumber === 1){
@@ -56,6 +60,7 @@ function startGame(){
 
 
 function renderGame(){
+
     
     cardsOwned.textContent = "Cards: "
     for (let i=0; i<cards.length; i++){
@@ -84,10 +89,7 @@ function newCard(){
         sum += thirdCard;
         cards.push(thirdCard);
         renderGame();
-
     }
-    
-    
 }
 
 

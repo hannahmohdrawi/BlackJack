@@ -4,6 +4,7 @@ A program to create a playable BlackJack game.
 ## Description
 This code was created using Scrimba BlackJack as a guide to become more familiar with JavaScript. <br>
 The code includes a fully functional BlackJack game to reach the winning total of 21 using the math random module to receive random cards.
+For the BlackJack game to be more personal, the players name should be added to be displayed along with their score.
 This includes use of functions, for loops, objects and if else statements. 
 
 
